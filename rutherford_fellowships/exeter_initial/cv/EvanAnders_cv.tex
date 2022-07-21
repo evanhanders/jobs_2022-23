@@ -1,0 +1,77 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.3 (29/10/16)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com) with modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same 
+% directory as this .tex file. These files provide the resume style and themes 
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,letterpaper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{casual} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{black} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage{fontawesome}
+\usepackage{etaremune}
+
+\usepackage[scale=0.75]{geometry} % Reduce document margins
+
+\newcommand{\leftright}[2]{#1 \hfill #2\\}
+\newcommand{\rtxt}[1]{\raggedleft \noindent #1 \\ \raggedright}
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Evan H.} % Your first name
+\familyname{Anders} % Your last name
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+%----------------------------------------------------------------------------------------
+%	CURRICULUM VITAE
+%----------------------------------------------------------------------------------------
+
+\makecvtitle % Print the CV title
+%\vspace{-24pt}
+\leftright{CIERA}{email: evan.anders@northwestern.edu}
+\leftright{Northwestern University}{website: \href{http://evanhanders.bitbucket.io}{evanhanders.bitbucket.io}}
+\leftright{Evanston, IL 60201}{Google Scholar: \href{https://scholar.google.com/citations?user=pOxWQ5sAAAAJ}{pOxWQ5sAAAAJ}}
+\rtxt{arXiv: \href{https://arxiv.org/a/anders\_e\_1.html}{anders\_e\_1}}
+\rtxt{\href{https://www.linkedin.com/in/evanhanders/}{\faLinkedinSquare}/\href{https://github.com/evanhanders/}{\faGithubSquare}: evanhanders}
+
+\input{cv_sections/interests.tex}
+\input{cv_sections/education.tex}
+\input{cv_sections/research_experience.tex}
+\input{cv_sections/grants_fellowships.tex}
+%\input{cv_sections/publications.tex}
+\input{cv_sections/invited_talks.tex}
+\input{cv_sections/service.tex}
+\input{cv_sections/awards.tex}
+\input{cv_sections/teaching_experience.tex}
+\input{cv_sections/outreach.tex}
+\input{cv_sections/conferences.tex}
+%\input{cv_sections/referee_service.tex}
+\input{cv_sections/references.tex}
+
+
+\end{document}
