@@ -1,0 +1,216 @@
+\documentclass[12pt]{letter}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{hyperref}
+
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\newcommand{\edit}[2]{\textcolor{purple}{\sout{#1} \textbf{#2}}}
+
+\geometry{tmargin=1in}
+\geometry{bmargin=1in}
+\geometry{lmargin=1in}
+\geometry{rmargin=1in}
+\geometry{headsep=1in}
+\setlength\topmargin{-2.5in}
+%\geometry{margin=1in}
+%\geometry{headheight=0.5in}
+%\fancypagestyle{firstpage}{\fancyhf{}
+\fancypagestyle{firstpage}{\fancyhf{}
+\setlength\topmargin{-1.25in}
+\fancyhead[C]{\includegraphics[width=\paperwidth,keepaspectratio=true]{ciera_header.pdf}}
+\fancyfoot[C]{\includegraphics[width=\paperwidth,keepaspectratio=true]{ciera_footer.png}}
+\renewcommand{\headwidth}{\paperwidth}
+\fancyheadoffset{\marginparwidth}
+\fancyfootoffset{\marginparwidth}}
+\renewcommand{\headrulewidth}{0pt}
+% Address is commented out so I can use an electronic signature below
+% If address is not commented out, then change \fancypagestyle{first} to
+% \fancypagestyle{empty}
+%\address{Nicholas Chapman \\
+%         1212 Central Street APT 1S\\
+%         Evanston, IL 60201}
+%\signature{Nicholas Chapman} % commented out because I use png signature file
+
+%They want to know:
+%are you a good fit to the department? -- paragraph 2 addresses this.
+%are you productive? -- cv addresses this?
+%is your work going to have a big impact in the future?
+
+\begin{document}
+\begin{letter}{
+        Dr.~Angela Dyson \& Faculty Search Committee \\
+        School of Mathematics, Statistics and Physics \\
+        Newcastle University}
+\opening{Dear Committee:}
+
+    I am applying for the position of Lecturer in Astrophysics at the Newcastle University School of Mathematics, Statistics and Physics.
+    With this letter, please find my curriculum vitae.
+
+    Astrophysical convection is poorly understood despite its crucial role in processes like wave generation and dynamo action.
+    The convection in stars and planets is highly turbulent, exists in the presence of extreme stratification, and is subject to magnetism, global rotation, and long-term evolutionary processes.
+    In my research, I investigate how these ``extra ingredients'' modify convective flows and emergent phenomena.
+    I have found that convection in density-stratified atmospheres exhibit the same fundamental heat transport scaling laws as incompressible, Boussinesq, Rayleigh-B\'{e}nard convection.
+    I have learned how to disentangle the scaling of turbulence and rotational constraint in the complicated parameter space of rotating convection.
+    I have extensively studied how fast convective flows interact with the (slowly evolving) background atmosphere.
+    More recently, I have learned what determines the location of the interface between a convective region and a stably-stratified region, and used that knowledge to help explain discrepancies between models and observations of massive stars.
+
+    \textbf{My top five research outputs}, ranked in order of importance, are the following papers:
+    \begin{enumerate}
+        \item Anders et al. 2022a, ApJ 926, 169 (“Convective Penetration Paper”)
+        \item Anders et al. 2022b, ApJL 928, L10 (“Schwarzschild-Ledoux Paper”)
+        \item Anders et al. 2019, ApJ 884, 65 (“Entropy Rain Paper”)
+        \item Jermyn, Anders, et al. 2022, ApJ 929, 182 (“Convective Penetration Paper II”)
+        \item Anders et al. 2018, PRF 3, 083501 (“Accelerated Evolution Paper”)
+    \end{enumerate}
+
+%    Last fall, I gathered with top researchers in my field at the “Probes of Transport in Stars” program at KITP. 
+%    At this program, I learned that members of multiple communities (1D stellar modellers, observers, and 3D hydrodynamicists) are highly interested in convective boundary mixing and its applications. 
+%    This is why I list my Convective Penetration Paper (\#1) as my most highly influential work, and why I propose to study convective boundary mixing during my time at Exeter (please refer to my Case for Support, Focus I). 
+%    This interest has led to a follow-up paper (\#4) which demonstrates that our theory of convective penetration shows promise for resolving discrepancies between observations and models. 
+%    The Schwarzschild-Ledoux Paper (\#2) also came out of this KITP meeting, brought together multiple fields, and addressed a fundamental question in stellar convection.
+    My most influential work focuses on penetrative convection.
+    Observations suggest that stellar structure models and 1D prescriptions of convection underestimate the size of convection zones.
+    To match these observations, boundary mixing processes implemented in 1D stellar structure models have to be finely tuned and varied from one type of star to another.
+    I have developed the first \emph{a-priori} theory which can explain these observations (paper \# 1), and follow-up work by Dr.~Adam Jermyn (paper \#4) suggests that this theory takes a step towards solving this decades-old problem.
+    I discovered this process while running simulations in which I expected very little mixing at the convective boundary.
+    Significantly, the convection zone advanced well beyond the expected boundary.
+    Using my previous work on the long-term secular evolution of convection zones, I realized that I was witnessing a long-timescale relaxation process.
+    Zahn and Roxburgh's work on penetrative convection in the 1980s and 90s provided me with analytical descriptions of this process.
+    I modified their theory to account for the effects of viscous dissipation, which cannot be neglected even in the large Reynolds numbers regime of astrophysical flows (per the zeroth law of turbulence).
+    This theory agreed well with laminar and turbulent three-dimensional simulations using the Dedalus code.
+    I parameterized this theory for inclusion in 1D stellar structure models.
+    I am currently collaborating with Dr.~Cole Johnston to implement this theoretical prescription into 1D MESA stellar evolution models to understand how this process affects stellar evolution.
+    \textbf{Talk about paper \# 2}.
+    Upon arriving at Newcastle, my first STFC grant proposal would target the next steps in unraveling this mystery, which will have to include state-of-the-art, 3D simulations of massive star core convection at a variety of masses.
+%    There are many ways in which this theory needs to be fine-tuned to reflect the full complexities of astrophysical settings; please refer to my personal career plan for discussion of follow-up work.
+%    In my attached career plan, I discuss in more detail several possible directions for the development of this work.
+
+    Earlier in my career, I studied “entropy rain” (\#3) as a possible solution to the “solar convective conundrum.” Deep within the Sun’s convection zone, theory and simulations predict that large-scale “giant cells” should be driven, but these flows are not robustly observed, and this is a conundrum. 
+    In this work, we tested the hypothesis that the Sun’s luminosity is carried by downflows launched from the solar surface in small “entropy raindrops,” which would not require giant cells to transport the flux. 
+    We surprisingly found this hypothesis may be valid.
+
+    Finally, in my Accelerated Evolution Paper (\#5), I created a tool which evolves convective simulations to their final equilibrated state using a factor of ten fewer computational resources than traditional time stepping methods. 
+    This paper showed why it is important for convection simulations to reach a state of energy equilibrium and why it is difficult to achieve this state using traditional time stepping methods for turbulent simulations. 
+    This paper also demonstrated that my alternative, fast method achieved the same statistically stationary state as (slow) traditional time stepping. 
+    This study created foundational numerical tools that enabled the science in papers \#1 and \#2.
+
+    These papers demonstrate my research's breath and my approach to science.
+    In particular, Papers \#1-3 demonstrate my process. 
+    I decompose complex problems into manageable research questions.
+    I study those questions using direct numerical simulations, which I perform using the very flexible \emph{Dedalus} pseudospectral framework. 
+    Then I use simulation results to learn something about stellar interiors. 
+    I have recently tried to ensure that the results of my simulations apply in a useful way to either the observing or the 1D stellar modelling community (e.g., by providing new or updating old 1D mixing prescriptions), because these communities are much larger than my own (hydrodynamical modelling). 
+    Paper \#4 shows one such application of my results. 
+    Finally, I have developed numerical tools to reduce the computational cost associated with pushing the limits of state-of-the-art simulations, and paper \#5 is an example of this.
+    I was the lead scientist on all of my first-author papers in the above list: I developed simulation code, performed simulations, carried out analyses, and wrote the manuscripts with editing help and creative collaborative meetings from coauthors along the way.
+    My contributions to paper \#4 came in ensuring that the theoretical prescription was being evaluated by MESA properly and in synthesizing the results.
+    The funding for these papers was provided by personal fellowship awards which I (and Prof.~Jermyn) applied for and were awarded.
+
+
+    \textbf{Teaching Statement:} I believe that good teachers are ``made'' and not born; being a good teacher is the result of active practice and earned expertise.
+    This belief fits in with my general outlook and my attempt to have a Growth mindset both for myself as a teacher and a scientist (we can learn from our mistakes and grow).
+    However I do of course acknowledge that experience with teaching is not enough; we as teachers should strive to improve our knowledge of teaching pedagogy and best educational practices.
+    I have done this throughout my academic career through e.g., my participation in UCSC ISEE's Professional Development Program twice and through taking CIRTL's ``Introduction to Evidence-Based STEM Teaching'' course this past summer.
+    As part of practicing best teaching practices, I believe that it is critical for teachers to get students involved in the learning process through active learning techniques (e.g., Think-Pair-Share).
+    Finally, I think it is important that teachers try to develop students with well-rounded skillsets.
+    So in addition to just teaching cognitive knowledge of astrophysics, it is critical that we as teachers also develop scientist \emph{skills} which are useful in not only our own field but in any sector that our students may pursue (e.g., communication, collaboration, persistence, organization, reflection).
+    In order to create environments where students can flourish in these ways, we must create equitable environments where a diverse set of opinions and views are accepted.
+    I will do this in som explicit ways (e.g., explicit welcome statements) and incorporate multiple ways for learners to succeed in my assignments in order to help develop competence, confidence, and STEM identity.
+
+    I work hard to develop my pedagogical and mentoring expertise through workshop attendance and practice.
+    I now provide research mentorship to five graduate students across three institutions.
+    Three of these mentorship relationships have already led to collaborative contributions on papers, and the other two have papers in preparation (all marked on my CV).
+    These projects include topics like magnetoconvection, an examination of convection driven by internal heating, and an examination of the instability of a fossil magnetic field in the cores of evolved stars.
+
+    I am excited to learn that Newcastle has been awarded an STFC Data Intensive Science CDT and to learn that this ensures numerous studentships which collaborate outside of academia to the department.
+    Numerical simulations produce large quantities of data, and it is unclear how to handle that data, etc., etc.
+    I have dabbled in trying to understand the proper way to statistically analyze datasets from fluid simulations (where treating events as uncorrelated is not an ideal assumption), and have been surprised at how little work has been done in this field.
+    I think there are plenty of productive ways to work in this framework.
+
+    \textbf{Equity, Diversity, and Inclusion:} I am dedicated to providing a just, equitable and inclusive environment in my mentoring relationships, my classrooms, and my host institution.
+    When I was a graduate student, I was an administrator of the CU STARs program, which both served as a mentorship network for undergraduate astrophysics students of traditionally underrepresented demographics and also gave those students opportunities to teach high schoolers about astronomy, thereby developing competence and confidence and outreach to the broader community.
+    Also as a graduate student, I served on the CU Boulder Astrophysics admissions committee for two years.
+    During my time on this committee I spearheaded the development of the first standardized rubric used in this process.
+    This helped reduce bias in the admissions process in measurable ways and has improved the diversity of admitted classes.
+    As a postdoctoral fellow at Northwestern, I forged connections between the CIERA astrophysics institute and the Baxter Center for Science Education, which has connections at many underserved high schools in the Chicago area.
+    By forging this bond, CIERA  now has more opportunities to connec to high school classrooms, and CIERA now facilitates a yearly ``Astronomy day'' as part of BCSE's summer scholars program, teaching high school students from primarily underrepresented backgrounds about the possibility of career paths in astronomy.
+    During my postdoctoral fellowship at CIERA, I chaired the K12 education and public outreach taskforce, and I now serve as a core member of CIERA's JEDI (Justice, Equity, Diversity, Inclusion) committee, which has organized an external sociosystemic organizational development plan, including a departmental climate survey, in the coming academic year.
+    As a Lecturer at Newcastle, I will continue my work in JEDI initiatives by participating in current public outreach initiatives, helping the School reach its goals set forth in its Athena Swan award plan, and by employing education pedagogy literature in my classroom to reduce the differential attrition of underrepresented individuals in my classes by e.g., having frank discussions of diversity issues in Physics. 
+
+
+    I am committed to developing the role of under-represented groups in physics and in developing evidence-based programs to target these groups both at the K12 level (as I have done in the past) and at the level of higher education.
+    E.g., within the department, if it does not exist, I am intereted in developing a mentorship network, both peer mentoring (...) and vertical mentoring (...) as both have been shown to improve retention.
+    I have consistently gone out of my way to work with these groups and to provide mentorship for underrepresented groups.
+
+    \textbf{Summary: } I am particularly excited about this Lecturer position.
+    The opportunity to join a rapidly-growing Physics group and to form long-lasting collaborations as part of a growing cohort is enticing.
+    I furthermore envision lots of potential for productive collaboration between myself and current members of the School like Drs.~Rogers, Wood, Guervilly, and Bushby on topics like the interactions between convection and stable regions, rotationally-constrained convection, stratified convection, and magnetoconvection.
+    I bring knowledge of new research areas, e.g., multi-timescale processes, expertise with the open-source Dedalus code, and also multi-scale processes such as my ``entropy rain'' research.
+    I am also excited about the possibility of using my Dedalus expertise to form cross-disciplinary collaborations, such as with members of the Applied Maths research group on topics like biological fluid dynamics and on quantum fluids with members of the JQC Durham-Newcastle.
+    I value teaching and mentorship, and am an engaged member of my department community.
+    For these reasons, I am an ideal candidate for this post.
+
+    In support of my application, please feel free to contact the following individuals:
+
+    \footnotesize
+    \begin{tabular}{ll}
+        \textbf{Prof.~Benjamin P.~Brown}                        &\hspace{0.25in} \textbf{Prof.~Daniel Lecoanet}                     \\
+        University of Colorado, Boulder                         &\hspace{0.25in} Northwestern University    \\
+        \hspace{0.2in}Dept.~Astrophysical \& Planetary Sciences &\hspace{0.45in} Dept.~Engineering Sciences \& Applied Mathematics \\
+        Tel: +1 (303) 653-2371                                    &\hspace{0.45in} CIERA                          \\
+        Email: bpbrown@colorado.edu                             &\hspace{0.25in} Tel: +1 (608) 335-3950 \\
+                                                                &\hspace{0.25in} Email: daniel.lecoanet@northwestern.edu             \\
+
+        \textbf{Dr.~Matteo Cantiello}                          & \\
+         Flatiron Insitute                                     & \\
+         \hspace{0.2in}Center for Computational Astrophysics   & \\
+         Princeton University                                  & \\
+         \hspace{0.2in}Dept.~Astrophysical Sciences & \\
+         Tel: +1 (805) 280-8175  & \\
+         Email: mcantiello@flatironinstitute.org & \\
+    \end{tabular}
+
+    \normalsize
+
+%    Other things I need to talk about:
+%    \begin{enumerate}
+%        \item Find all possible collaboration avenues in Physics (\url{https://www.ncl.ac.uk/maths-physics/research/physics/astrophysics/})
+%        \item STFC CDT
+%        \item Openness to collaboration with Research in quantum fluids and gases is carried out as part of the JQC (Joint Quantum Centre) Durham-Newcastle, a formal collaboration between Newcastle University and the University of Durham
+%        \item Excitement about being part of a growing department.
+%        \item express a genuine interest and commitment to developing the role of under-represented groups in physics, and an interest in establishing innovative, evidence-based programmes that will target these groups at all levels
+%        \item $\times$ Your top 5 research outputs (accounting for career breaks) in which you have had a significant input. This may include journal publications and other forms of output relating to impact. For multi-author works, describe your contribution AND research funding applied for or received.
+%            \begin{enumerate}
+%                \item See narrative CV from Rutherford.
+%            \end{enumerate}
+%        \item $\times$ What constitutes excellent teaching to you (teaching statement).
+%            \begin{enumerate}
+%                \item Good teachers are made, not born -- practice and experience.
+%                \item Knowledge of teaching pedagogy; point towards CIRTL and PDP.
+%                \item Inclusive teaching, active learning
+%                \item Growth mindset; seeking and accepting feedback and growing from it0
+%                \item Teaching practical skills e.g., the STEM skills rubric (useful for any career).
+%            \end{enumerate}
+%        \item $\times$ Your past contributions to Equality, Diversity and Inclusion (EDI) and what your contributions to EDI at Newcastle will be
+%            \begin{enumerate}
+%                \item CU STARs
+%                \item Admissions rubric
+%                \item K12 taskforce / Baxter
+%                \item JEDI and climate survey
+%                \item Mentorship
+%                \item Future contributions: Athena Swan (esp.~in hiring decisions / improving hiring practices), work to reduce differential attrition in my classrooms (physics identity, discussion of UREP, values affirmation) [plenty of room to grow within the school], continue public outreach efforts.
+%            \end{enumerate}
+%    \end{enumerate}
+    
+    If there are any other questions or concerns please do not hesitate to contact me.
+    Thank you for your time and consideration.
+
+\closing{Sincerely,}
+\vspace{-0.9in}
+\fromsig{\includegraphics[scale=0.2]{signature.png}}\\
+\fromname{Evan H. Anders}
+\end{letter}
+
+\end{document}
