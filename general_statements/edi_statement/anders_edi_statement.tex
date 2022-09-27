@@ -1,0 +1,132 @@
+\documentclass[11pt]{article}
+%%%%%%begin preamble
+\usepackage[hmargin=1in, vmargin=1in]{geometry} % Margins
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{wrapfig}
+
+\usepackage{multicol}
+\usepackage{etoolbox}
+%\patchcmd{\thebibliography}{\section*{\refname}}
+%    {\begin{multicols}{2}[\section*{\refname}]}{}{}
+%\patchcmd{\endthebibliography}{\endlist}{\endlist\end{multicols}}{}{}
+
+
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\newcommand{\edit}[2]{\textcolor{purple}{\sout{#1} \textbf{#2}}}
+
+\hypersetup{
+  colorlinks   = true,
+  %citecolor    = blue
+  citecolor    = blue
+  % gray is not being found!?!
+  % gray is found if pdfpages is used... crap.
+  %citecolor    = grey
+  %citecolor    = Gray
+}
+
+
+%% headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % sets both header and footer to nothing
+\lhead{Evan H. Anders}
+\rhead{Equity, Diversity, \& Inclusion Statement}
+\cfoot{\footnotesize{\thepage}}
+%\pagestyle{empty}
+%\pagenumbering{gobble}
+%\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+
+\renewcommand{\vec}{\ensuremath{\boldsymbol}}
+\newcommand{\dedalus}{\href{http://dedalus-project.org}{Dedalus}}
+\newcommand{\del}{\ensuremath{\vec{\nabla}}}
+\newcommand{\scrS}{\ensuremath{\mathcal{S}}}
+
+\newcommand{\prf}{Physical Review Fluids}
+\newcommand{\ssr}{Space Science Reviews}
+\newcommand{\araa}{Annual Reviews of Astronomy and Astrophysics}
+\newcommand{\mnras}{Monthly Notices of the Royal Astronomical Society}
+\newcommand{\aap}{Astronomy \& Astrophysics}
+\newcommand{\apjl}{The Astrophysical Journal Letters}
+\newcommand{\apj}{The Astrophysical Journal}
+
+%\newcommand{\nosection}[1]{%
+%  \refstepcounter{section}%
+%  \addcontentsline{toc}{section}{\protect\numberline{\thesection}#1}%
+%  \markright{#1}}
+%\newcommand{\nosubsection}[1]{%
+%  \refstepcounter{subsection}%
+%  \addcontentsline{toc}{subsection}{\protect\numberline{\thesubsection}#1}%
+%  \markright{#1}}
+
+%\usepackage{atbegshi}
+%%%%%%end preamble
+
+
+%Make bibliography 2col
+\bibliographystyle{apj_small}
+\makeatletter
+\renewenvironment{thebibliography}[1]
+     {\begin{multicols}{2}[\paragraph*{\refname}\vspace{-0.1in}]%
+      \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}%
+      \list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \setlength{\itemsep}{-2pt}
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist\end{multicols}}
+\makeatother
+
+
+
+\begin{document}
+\thispagestyle{fancy}
+
+STEM fields, particularly those in the physical sciences, have a demographics crisis. 
+Our fields are more male and more white than the U.S.~population as a whole, which means that these fields are missing out on diverse perspectives and talent (cite). 
+A great deal of focus is put on the “leaky pipeline” from grade school to college, but there is a great deal of differential attrition of underrepresented groups at the undergraduate level, where university professors have the most opportunity to interact with and support underrepresented students (cite). 
+
+My focus on improving retention of these underrepresented groups is rooted in helping support those students as they build identities for themselves as scientists. 
+Students come into the classroom as full people defined by the intersection of their identities, experiences, and prior knowledge. 
+It is our roles as a physics instructor to provide inclusive environments in which all students can engage, learn, and thrive. 
+This can be accomplished in small ways, such as through explicit statements of welcome to people of all racial groups, religious faiths, genders, citizenship status, ability, linguistic ability, and social class. 
+More generally, my goals are to give students plenty of chances to not only develop competence in the field, but to also give them changes to perform as scientists, and to offer them genuine and organic recognition for their scientific accomplishments (cite).
+
+My experience with the CU-STARs group at the University of Colorado helped me see this competence-performance-recognition triad in action. 
+CU-STARs is a welcoming group for undergraduate students studying physics and astrophysics at CU. 
+This group has regular meetings in which graduate student leaders mentor the undergraduates and educate undergraduate students about common problems faced by young scientists like stereotype threat (cite), imposter’s syndrome (cite), etc.~while offering them ways to build themselves up like values affirmation (cite) and discussions of fixed vs.~growth mindset (cite). 
+In addition to these mentorship aspects, CU-STARs led outreach trips to underserved high schools across Colorado in which the undergraduates served as near-peer teachers to the high school students. 
+Through this the STARs have an opportunity to gain competence in both teaching and an area of astrophysics as they develop lesson plans, they have the chance to perform as scientists by teaching high schoolers and serving as a contact in science, and they have a chance to be recognized by us, the grad student leaders, as we gave them honest praise and constructive feedback to improve their lessons and teaching over time.
+
+I have also tried to implement this framework in my own research mentoring. 
+Currently, as a postdoc, I am a secondary mentor to five graduate researchers (two at University of Colorado, two at Northwestern, one at McGill) and one undergraduate researcher (who I know from a Norhtwestern REU). 
+While doing research naturally builds scientific competence, I do try to practice mirroring (cite) with my students so that I ensure that I understand their questions and so that I can speak to their comfort zone and level of competence accurately. 
+Many of these students preface questions with “this is a stupid question,” etc, from their years of being in classes where teachers are only seeking the “right” answer and I have to remind them that asking questions is how we all learn and build competence, and I try to encourage them to ask questions. 
+I try hard to make sure that I provide guidance but do not “take over” when I’m with my students, giving them the chance to perform as scientists (be it providing their results to a colleague, putting together a plot, etc.), because those skills have to be practiced. 
+And, importantly, I frequently encourage and complement my students for their work. 
+Even small victories deserve to be celebrated, and I try to instill that mindset in my students.
+
+In short, I want to try to offer students opportunities to meaningfully contribute regardless of their background and comfort level, so that they can build their own competence and science identities.
+
+
+{\scriptsize
+\bibliography{biblio}
+}
+\end{document}

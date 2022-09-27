@@ -1,0 +1,130 @@
+\documentclass[11pt]{article}
+%%%%%%begin preamble
+\usepackage[hmargin=1in, vmargin=1in]{geometry} % Margins
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{wrapfig}
+
+\usepackage{multicol}
+\usepackage{etoolbox}
+%\patchcmd{\thebibliography}{\section*{\refname}}
+%    {\begin{multicols}{2}[\section*{\refname}]}{}{}
+%\patchcmd{\endthebibliography}{\endlist}{\endlist\end{multicols}}{}{}
+
+
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\newcommand{\edit}[2]{\textcolor{purple}{\sout{#1} \textbf{#2}}}
+
+\hypersetup{
+  colorlinks   = true,
+  %citecolor    = blue
+  citecolor    = blue
+  % gray is not being found!?!
+  % gray is found if pdfpages is used... crap.
+  %citecolor    = grey
+  %citecolor    = Gray
+}
+
+
+%% headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % sets both header and footer to nothing
+\lhead{Evan H. Anders}
+\rhead{Teaching Statement}
+\cfoot{\footnotesize{\thepage}}
+%\pagestyle{empty}
+%\pagenumbering{gobble}
+%\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+
+\renewcommand{\vec}{\ensuremath{\boldsymbol}}
+\newcommand{\dedalus}{\href{http://dedalus-project.org}{Dedalus}}
+\newcommand{\del}{\ensuremath{\vec{\nabla}}}
+\newcommand{\scrS}{\ensuremath{\mathcal{S}}}
+
+\newcommand{\prf}{Physical Review Fluids}
+\newcommand{\ssr}{Space Science Reviews}
+\newcommand{\araa}{Annual Reviews of Astronomy and Astrophysics}
+\newcommand{\mnras}{Monthly Notices of the Royal Astronomical Society}
+\newcommand{\aap}{Astronomy \& Astrophysics}
+\newcommand{\apjl}{The Astrophysical Journal Letters}
+\newcommand{\apj}{The Astrophysical Journal}
+
+%\newcommand{\nosection}[1]{%
+%  \refstepcounter{section}%
+%  \addcontentsline{toc}{section}{\protect\numberline{\thesection}#1}%
+%  \markright{#1}}
+%\newcommand{\nosubsection}[1]{%
+%  \refstepcounter{subsection}%
+%  \addcontentsline{toc}{subsection}{\protect\numberline{\thesubsection}#1}%
+%  \markright{#1}}
+
+%\usepackage{atbegshi}
+%%%%%%end preamble
+
+
+%Make bibliography 2col
+\bibliographystyle{apj_small}
+\makeatletter
+\renewenvironment{thebibliography}[1]
+     {\begin{multicols}{2}[\paragraph*{\refname}\vspace{-0.1in}]%
+      \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}%
+      \list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \setlength{\itemsep}{-2pt}
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist\end{multicols}}
+\makeatother
+
+
+
+\begin{document}
+\thispagestyle{fancy}
+
+My teaching philosophy is rooted in a growth mindset (cite). 
+I have a lot to learn about teaching and how to be a better teacher, and my growth as a teacher over the past decade has been massive, as I will lay out below. 
+Furthermore, I believe that courses should be designed so that through hard work, all students who put in effort can grow, learn, and be successful in the classroom.
+
+I want to say straightforwardly that I have only scratched the surface in learning about best teaching practices and pedagogy, but I am excited to learn more, and to gain experience and learn how to be a better teacher. 
+At the beginning of my graduate career, I though that good teachers were “born not made.” Through my own teaching journey, I have come to realize quite the opposite is true. 
+I can trace my current development as a teacher through the pedagogical best practices that I have learned over time.
+
+During my graduate school orientation, first year graduate students were taught a few best pedagogical practices. 
+These included  simple facilitation moves like being silent and giving students space and time to respond to questions. 
+We also learned about how to  incorporate active learning techniques like multiple choice questions and clickers, and were specifically taught to give students the space to be wrong (without penalization), and then to give them the space to discuss their choices and argue with other students, and convince others (or be convinced) that they were wrong. 
+I was fortunate enough to be a “lab TA,” where I got to teach my own groups of 20 students about once a week, and I got to try out these techniques a few times during my semesters as a TA. 
+I learned both how difficult it can be to properly implement these techniques, but also how rewarding and effective informed pedagogical choices can be.
+
+In my third and fifth year of graduate school, I attended UCSB ISEE’s Professional Development Program (PDP). 
+This program was my first exposure to backwards design (cite) and assessment-driven course design, as well as the concept of designing activities which provide students opportunities to participate in genuine scientific inquiry (cite). 
+One of the most fundamental and useful things that I learned during this program was the power of rubrics and how to create and iterate upon them.I was so enamored that I even led the push to implement standardized rubrics in the graduate admissions committee at the University of Colorado, and I’m proud to say that committee now uses a standardized rubric (my advisor, Prof.~Benjamin Brown, who was also on that committee, can provide more details)! I was so excited about backwards design and active learning techniques that, when I was given the opportunity to be a co-instructor of record with a fellow graduate student in 2017, my fellow instructor and I decided to redesign the course from the ground up using backwards design principles. 
+I did not appreciate just how much work goes into designing a course, especially designing a course with care and thought. 
+My 5 weeks teaching that course involved some of the highest highs of my professional career, but I learned so much about how to be an effective teacher and how to design a good course. 
+I also learned when to ask for help, and when to take advantage of course material that colleagues have developed (and to make small improvements, not redesign whole courses).
+
+In summary, I have grown so much as a teacher in the past ten years, that I cannot say for certain what my classrooms will look like ten or even two years from now. 
+In my career I have tried to apply pedagogical principles to all aspects of my work where they are applicable ( for example, backwards design has helped me developing clearer research talks and papers). 
+I look forward to learning more, and growing as an educator, in the years that come.
+
+{\scriptsize
+\bibliography{biblio}
+}
+\end{document}
