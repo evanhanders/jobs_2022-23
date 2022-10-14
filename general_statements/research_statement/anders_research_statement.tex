@@ -48,15 +48,15 @@
 \newcommand{\del}{\ensuremath{\vec{\nabla}}}
 \newcommand{\scrS}{\ensuremath{\mathcal{S}}}
 
-\newcommand{\prf}{Physical Review Fluids}
-\newcommand{\prr}{Physical Review Research}
-\newcommand{\ssr}{Space Science Reviews}
-\newcommand{\araa}{Annual Reviews of Astronomy and Astrophysics}
-\newcommand{\mnras}{Monthly Notices of the Royal Astronomical Society}
-\newcommand{\aap}{Astronomy \& Astrophysics}
-\newcommand{\apjl}{The Astrophysical Journal Letters}
-\newcommand{\apj}{The Astrophysical Journal}
-\newcommand{\apjs}{The Astrophysical Journal Supplemental Series}
+\newcommand{\prf}{PRF}
+\newcommand{\prr}{PRR}
+\newcommand{\ssr}{SSR}
+\newcommand{\araa}{ARAA}
+\newcommand{\mnras}{MNRAS}
+\newcommand{\aap}{A\&A}
+\newcommand{\apjl}{ApJL}
+\newcommand{\apj}{ApJ}
+\newcommand{\apjs}{ApJL}
 
 \newcommand{\sct}[1]{\vspace{0.3cm}\hspace{-\parindent}\textbf{\underline{#1}}\hspace{0.3cm}}
 
@@ -114,112 +114,83 @@ Current and next-generation space- and ground-based observatories are revolution
 %Proposed space-based gravitational-wave observatories (\emph{LISA}) will complement these observations with extreme sensitivity to the galactic white dwarf population \citep{robson_etal_2019}.
 %
 %
-Discoveries ranging from exoplanets to black holes rely on high-precision stellar evolution models \citep{mesa6}, and convection introduces uncertainty into these models.
-Mixing at the convective core boundary of massive stars ($M_* \gtrsim 1.1 M_\odot$) lead to core mass uncertainties of up to 70\% \citep{kaiser_etal_2020}, resulting in evolutionary pathway uncertainty.
-Strange convection in the outer layers of these stars can inflate the stellar surface and change the way that the star loses mass and evolves (cite).
-Luminosity variations from surface convective patterns on less massive stars can completely cover the signals of e.g., planets in radial velocity measurements \citep{crass_etal_2021}.
-These processes and signals result from nonlinear 3D magnetoconvection, which is poorly modeled in stellar evolution calculations and theoretical prescriptions.
-\textbf{Modern precision observations have revealed major theoretical shortcomings in models of convection and demand a new state-of-the-art set of convective simulations. }
+Discoveries ranging from exoplanets to black holes rely on high-precision stellar evolution models for calibration \citep{mesa6}, and convection introduces uncertainty into these models.
+Mixing at the convective core boundary of massive stars ($M_* \gtrsim 1.1 M_\odot$) leads to core mass uncertainties of up to 70\% \citep{kaiser_etal_2020}, making the evolutionary pathway of a star from birth to death unclear.
+Strange iron-opacity-driven convection in the outer layers of massive stars can also inflate the stellar surface and alter mass loss via winds at the stellar surface \citep{kohler_etal_2015}.
+On lower mass stars, luminosity variations from surface convective can completely cover the signals of earth-like planets in radial velocity measurements \citep{crass_etal_2021}.
+These processes and signals result from nonlinear 3D convection, which is poorly modeled in stellar evolution calculations and theoretical prescriptions.
+%\textbf{Modern precision observations have revealed major theoretical shortcomings in models of convection and demand a new state-of-the-art set of convective simulations. }
 
 
 %These observational puzzles demand models that go beyond the current state-of-the-art.
-\textbf{The goal of my research plan for the next five years is to build a next-generation set of global and local 3D numerical simulations, which will answer the following three questions:}\vspace{-0.2cm}
+\textbf{The goal of my research plan is to build a next-generation set of global and local 3D numerical simulations, which will answer the following three questions:}\vspace{-0.2cm}
 \begin{enumerate}
     \item How large are convective cores in massive stars? \vspace{-0.2cm}
     \item How does iron-bump convection affect the stratification of massive stars, and how does this affect the color and luminosity of these stars?\vspace{-0.2cm}
-    \item How does surface convective blueshift vary across stellar mass?\vspace{-0.2cm}
+    \item How does planet-obscuring convective blueshift vary across stellar mass?\vspace{-0.2cm}
 \end{enumerate}
 
 \sct{Focus I: Convective Boundary Mixing}
 Observations consistently demonstrate a need for improved models of convective boundary mixing (CBM) \citep{johnston2021}.
 Stellar models require an unexplained mass-dependent CBM to reproduce observed eclipsing binary populations  \citep{claret_torres_2019}.
-The amount of CBM used in stellar evolution models determines the main sequence width on the HR diagram and thus the stellar lifetime, luminosity, and effective temperature \citep{castro_etal_2014,higgins_vink_2019}.
-Asteroseismology directly probes the results of CBM, revealing extensive mixing near convective core boundaries, and that \emph{both} entropy and chemical composition mix in a process called ``convective penetration'' \citep{michielsen_etal_2019, pedersen_etal_2021}.
+The amount of CBM used in stellar evolution models modifies how a star's luminosity and effective temperature evolve \citep{castro_etal_2014,higgins_vink_2019}.
+Asteroseismology now allows us to directly probe near-core CBM, revealing extensive mixing occurs near convective core boundaries \citep{michielsen_etal_2019, pedersen_etal_2021}.
 
-%State-of-the-art simulations also demonstrate that convection prefers larger cores than models predict.
-%Many simulations have shown rapid turbulent entrainment at convective boundaries in massive and evolved stars (cites), but these simulations are never run for long enough to reach a statistically stationary state.
-%What's worse, when the entrainment law calibrated to these simulations is put directly into stellar structure models, studies find that the convective core consumes the whole star (cites), which is clearly unphysical.
-%Convection zones should clearly saturate at some size which is larger than the size given by e.g., the Schwarzschild criterion in standard models.
-%I recently performed simulations which demonstrated that energetically equilibrated convection zones can expand well beyond the Schwarzschild boundary, and also found a constraint upon the expansion of that convection zone (see Fig.~\ref{fig:penconv}), (cite).
-%When this constraint is applied in postprocessing to stellar models, we find that this constraint produces mixing of the stellar core which produces similar trends to observations (see Fig.~\ref{fig:penconv_stars}), (cite).
-%However, this constraint was calibrated in a 3D Cartesian domain, and in the incompressible approximation.
-
-%Stellar core convection is traditionally very difficult to simulate.
-%Many codes include a ``cutout'' near $r = 0$ and so do not truly evolve the full convective core, which may produce unphysical dynamics (cites).
-%Furthermore, core convection occurs at very low mach numbers (cite atlas, give typical values); frequently-used methods to simulate these low-mach flows include using the anelastic approximation (cites), which does not perform well when regions beyond the convection zone are mixed, or boosting of the luminosity, which may lead to unphysically large overshoot zones (cites).
-
-To address these modeling deficiencies, my group will create simulations of the cores of massive stars using the \emph{Dedalus} \citep{burns_etal_2020} code.
-These simulations will differ from past simulations of massive stars, because they will include the full ``ball'' geometry of the convective core, they will employ the fully compressible equations without any luminosity boosting, and they will be relaxed into thermal equilibrium; an example of one of these new state-of-the-art simulations is shown in Fig.~\ref{fig:dedalus_massive_star}.
+To understand the fluid dynamical picture behind CBM, my group will create simulations of the cores of massive stars using the \emph{Dedalus} \citep{burns_etal_2020} code.
+These simulations will differ from past simulations of massive stars, because they will include the full ``ball'' geometry of the convective core, they will employ the fully compressible equations without any luminosity boosting, and they will be relaxed into thermal equilibrium\footnote{See \url{https://vimeo.com/483598178} for a preliminary example of one of these simulations.}.
 \emph{Dedalus} was recently updated with the state-of-the-art ability to simulate flows that pass through the coordinate singularity at $r = 0$ in spherical coordinates \citep{vasil_etal_2019,lecoanet_etal_2019}; most prior codes used a spherical shell geometry with a small interior ``cutout'' of the core.
-We have successfully simulated very low Mach number flows without timestepping restrictions in Dedalus by employing implicit-explicit (IMEX) timestepping techniques; we implicitly step the stiff linear sound waves while explicitly timestepping the nonlinear advective terms, which allows us to accurate take timesteps which follow the convection rather than the fast waves.
-Regarding thermal equilibration, my previous CBM studies \citep{anders_etal_2022a,anders_etal_2022b} demonstrated that the structure of boundary mixing regions can take thousands of convective overturn times to saturate.
-Fortunately, I have developed methods of ``accelerated evolution'' \citep{anders_etal_2018}; these techniques allow me to achieve thermally equilibrated solutions while saving up to an order of magnitude in computational resources.
+Our implicit-explicit (IMEX) timestepping scheme allows us to circumvent timestepping restrictions from fast sound waves \citep{anders_brown_2017}, so we can take fast timesteps without boosting the luminosity as many prior simulations have done.
+Evolving a simulation to thermal equilibration using classic timestepping techniques can take thousands of convective overturn timescales \citep{anders_etal_2022a,anders_etal_2022b}.
+Fortunately, I have developed methods of ``accelerated evolution'' \citep{anders_etal_2018}, which self-consistently equilibrate simulations using an order of magnitude fewer cpu-hours than traditional timestepping.
 
-My group will study convective penetration \citep[Fig \ref{fig:penconv}, left,][]{anders_etal_2022a}, in fully compressible simulations whose background stratifications are based upon MESA models of massive stars (as in Fig.~\ref{fig:dedalus_massive_star}, middle).
-We will study non-rotating and rotating stars with masses varying in the range $M_* = 1.1-40 M_{\odot}$.
-These models will be used to create a 1D implementation of convective boundary mixing informed by realistic simulations in the proper geometry, significantly improving the limited model we presented in \citep{anders_etal_2022a}; we will implement this prescription into the MESA 1D stellar structure code.
-I will also publish an open-source, fully compressible \emph{Dedalus} module, so the community will have straightforward access to a tool to use for studying dynamics in massive stars.
-%I will in particular study the low-mass range from $1.1-3 M_{\odot}$, where observed ``extra mixing'' is a strong function of stellar mass \citep[][Fig.~\ref{fig:claret_torres} and Fig.~\ref{fig:penconv_stars}]{claret_torres_2019}, and compare these simulations to these observations of eclipsing binaries.
-%I will include rotation into my models to understand how the stellar rotation rate affects convective boundary mixing.
-%Rotation is theorized to reduce the extent of convective boundary mixing \citep{augustson_mathis_2019}.
-%In our current theory of CBM via convective penetration \citep{anders_etal_2022a} the mixing region's size depends on the dissipation in the convection zone.
-%Rotation effectively organizes flows into rotation-aligned vortices with high dissipation rates (cite), so this logically follows, but the degree to which the effect operates must be calibrated.
+My group will study CBM in fully compressible simulations whose background stratifications are based upon MESA (Modules for Experiments in Stellar Astrophysics) models of massive stars.
+We will study non-rotating and rotating stars with masses varying in the range $M_* = 1.1-40 M_{\odot}$ (the lowest masses where convective cores appear, up to high masses).
+Our results will inform a 1D implementation of convective boundary mixing, which we will then implement into the open-source MESA software instrument.
+Throughout this process, I will build our simulation code with ease-of-use for the user in mind, and this code will be made publicly available and citeable so that the community has access to a robust tool for studying stellar fluid dynamics.
 
-\textbf{\underline{\emph{Deliverable:}} The first rotating, 3D simulations of core convection that include $\boldsymbol{r = 0}$, reach thermal equilibrium, and span the main sequence.}
+\textbf{\underline{\emph{Deliverable:}} The first rotating, 3D simulations of core convection that include $\boldsymbol{r = 0}$ and reach thermal equilibrium.}
 
 \textbf{\underline{\emph{Student Opportunities:}}} Advanced undergraduate students will have opportunities to study 1D stellar evolution models with convective boundary mixing.
-There are multiple possible PhD projects which could be rooted in this science.
-Running many 3D simulations, improving the parameterization of boundary mixing, and implementing this into the MESA code could be three separate papers forming the basis of a thesis.
-The convection at the core of these stars simulate observable waves, and the way rotation affects those waves is not well-understood, so there are many opportunities for study there, too.
+A graduate thesis could consist of running many 3D simulations, generating the parameterization of CBM, and implementing it into MESA (three separate papers).
+Core convection generates asteroseismically-observable waves, and the generation and propagation of these waves is poorly modeled in simulations and could be the focus of a graduate thesis.
 
 \sct{Focus II: Optically thick, low-efficiency Iron-Bump Convection.}
 In addition to vigorous core convection, it is now accepted that massive stars have opacity-driven convective shells in their envelopes \citep{cantiello_etal_2009}.
 For stars with masses $\gtrsim 8 M_{\odot}$, an ``Iron-Bump Convection Zone'' (FeCZ) appears as a result of the opacity of iron.
-These convection zones approach the Eddington luminosity limit, are very thin, exhibit high-mach number, turbulent flows, and are very radiation-dominated \citep{jermyn_etal_2022_atlas}.
-However, unlike the convection zones at the surface of lower-mass stars (e.g., the Sun), these convection zones generally appear at high optical depths \citep[fig 59 of][]{jermyn_etal_2022_atlas}.
-This is an exotic regime of convection which has not been studied in detail, but the presence of these convection zones influences the stellar structure and evolution appreciably (cites).
+These convection zones are odd: they approach the Eddington luminosity limit, are very thin, and exhibit high-Mach number, turbulent flows \citep{jermyn_etal_2022_atlas}.
+%However, unlike the convection zones at the surface of lower-mass stars (e.g., the Sun), these convection zones generally appear at high optical depths \citep[fig 59 of][]{jermyn_etal_2022_atlas}.
+This odd convection has not been studied in detail, but the presence of these convection zones influences the stellar structure and evolution appreciably \citep{kohler_etal_2015}.
 
-%In stellar models, the presence of the near-Eddington FeCZs under traditional MLT convective approximation lead to odd stellar model behavior.
-%These zones often develop density and gass pressure inversions (cite) which inflate the star and must be handled in ad-hoc rather than physical manners \citep{kohler_etal_2015}.
-%The stellar inflation accompanying these zones reduces the effective surface temperature (cite) which modifies the efficiency of winds launched from the stellar surface, affecting the mass loss achieved by these stars and the subsequent stellar evolution \citep{smith_2014} (cite more?).
 
 Numerical simulations of these convection zones are extremely limited.
 Those simulations which have been performed \citep{jiang_etal_2015, schultz_etal_2020} demonstrate interesting dynamics and thermodynamics.
-The high-Mach number convection supports a large amount of dynamic pressure, which alters the thermal structure of the star and can inflate the star.
+The high-Mach number convection supports a large dynamic pressure, which can inflate the star.
 I will use \emph{Dedalus} to build on the high-Mach number, fully compressible simulations that I studied in Ref.~\citep{anders_brown_2017} by including iron bump opacity effects.
-My research group will study a span of simulations varying stellar mass from $8-60 M_{\odot}$ and at various stellar ages to understand the turbulent pressure component that arises from these simulations in order to improve the stratification in stellar models without needing ad-hoc solutions.
+My research group will study a span of simulations varying stellar mass from $8-60 M_{\odot}$ and at various stellar ages to understand the turbulent pressure component that arises from these zones.
 
-%Furthermore, there is a current debate about whether ``red noise'' or ``stochastic low-frequency variability,'' (SLFV) which is a ubiquitous signal observed in massive stars \citep{bowman_etal_2019}, is the signal of gravity waves generated in the convective core or a result of turbulent motions generated by surface convection zones.
-%A number of simulations of core generated gravity waves have been performed (cites), but these simulations do not include the FeCZ and so it is impossible to tell how this zone would affect these waves.
-%An examination of turbulent motions generated by the FeCZ suggest that they could be coincident with SLFV \citep{schultz_etal_2022}, but further studies are needed.
-%After studying how the FeCZ generates a turbulent pressure to alter the stellar stratification, I will study how the FeCZ modifies the signal of gravity waves generated by core convection.
-%I will include the stable radiative zone surrounding the FeCZ in my simulations and force a spectrum of gravity waves at the bottom boundary, then measure how these waves interact with and are modified by the turbulent convection in the FeCZ.
+We will study iron bump convection in Cartesian, optically thick models \citep[good approximations,][]{jermyn_etal_2022_atlas}.
+We will measure how the turbulent pressure modifies the background pressure, incorporate this into MESA, then study the observable consequences of this pressure.
 
-We will study iron bump convection in Cartesian, optically thick models.
-We will measure how the turbulent pressure compares to the background pressure, incorporate this into stellar evolution models, then study how this affects the stellar radius, effective temperature, and other observables of these stars.
+\textbf{\underline{\emph{Deliverable:}} The first 3D simulations of FeCZs at many stellar masses.}
 
-\textbf{\underline{\emph{Deliverable:}} The first 3D simulations of iron-bump convection spanning the HR diagram.}
-
-\textbf{\underline{\emph{Student Opportunities:}}} Advanced undergraduate students will study how dynamical pressure changes the surface temperature of stars, and learn how this affects predictions of how rapidly these stars lose mass through winds at their surfaces.
-The modification of the code to include the iron bump opacities, conducting the simulations, and incorporating the dynamical pressure into MESA would make an excellent thesis project.
+\textbf{\underline{\emph{Student Opportunities:}}} Advanced undergraduate students will study how FeCZs change surface observables of stars using current prescriptions, and examine evolutionary (wind loss) consequences in detail.
+A graduate thesis could consist of modifying \emph{Dedalus} to include iron bump opacity, a simulation suite, and incorporating the dynamical pressure into MESA.
 
 \sct{Focus III: Convective Blueshift}
 An Earth-like planet around a Sun-like star produces a radial velocity (RV) signal on the order of 10 cm/s.
 Extreme Precision RV (EPRV) instruments are now sensitiveg enough to observe signals below this threshold, but stellar surface convection produces RV signals much larger than 10 cm/s \citep{crass_etal_2021}.
-``Convective Blueshift" (CBS) is a net blueshifting of snpectral line wings resulting from the convection granulation pattern (warm upflows cover more surface area than cold downflows).
+``Convective Blueshift" (CBS) is a net blueshifting of spectral line wings resulting from the convection granulation pattern (warm upflows cover more surface area than cold downflows).
 CBS measurements were recently obtained for hundreds of stars \citep{liebing_etal_2021}; a tight cubic relationship is found between the effective temperature and CBS, which may result from the changing size of convective granules. %careful about "robust"
-In order to robustly remove CBS from EPRV signals, empirical fits must be tested and validated against theory and nonlinear magnetoconvection simulations. 
+In order to robustly remove CBS from EPRV signals, empirical fits must be tested and validated against theory and nonlinear convection simulations. 
 
 Convection at the Sun's surface has been studied in exquisite detail in Cartesian simulations which include full radiative transfer (RT) treatments \citep[e.g.,][]{rempel2020, danilovic_etal_2022}.
-Unfortunately this full RT treatment makes these simulaitions costly, so studying CBS across the lower main sequence is not feasible.
-My research group will develop magnetoconvection simulations with reduced models of RT.
-Using a computationally efficient but still realistic RT treatment, we will create a simulation suite spanning the lower main sequence and create synthesized observables to compare with existing CBS datasets.
+Unfortunately this full RT treatment makes these simulaitions costly, so studying CBS for many different stars is unfeasible.
+My research group will develop simulations with efficient, reduced models of RT to create a simulation suite spanning the lower main sequence and create synthesized observables to compare with existing CBS datasets.
 
-I will lead efforts to create fully compressible magnetoconvection simulations in \emph{Dedalus} in a local, Cartesian model of a stellar surface using three different levels of approximation for radiative transfer.
-We will implement convection under the Eddington tensosr approximation \citep[previously tested in \emph{Dedalus} in ref.][sct.~XI.G]{burns_etal_2020}, under the approximation of a grey atmosphere with a ``realistic'' radiative diffusivity \citep{barekat_brandenburg_2014}, and under a simplified diffusion approximation with an idealized radiative diffusivity and an imposed surface cooling.
+I will lead efforts to create fully compressible convection simulations in \emph{Dedalus}.
+We will implement convection under the Eddington tensosr approximation \citep[e.g., ref.][sct.~XI.G]{burns_etal_2020}, under a grey atmosphere approximation with a ``realistic'' radiative diffusivity \citep{barekat_brandenburg_2014}, and under a simplified diffusion approximation with an idealized radiative diffusivity and an imposed surface cooling.
 Fundamental properties of interest are the size and flow speed of convective granules.
-After verification of these simulations, we will create a suite of local simulations of surface convection spanning the lower main sequence.
-Finally, synthesized observables of CBS which can be compared to observations \citep{liebing_etal_2021} will be compared.
+From these simulations, we will synthesize observables of CBS which can be compared to observations \citep{liebing_etal_2021}.
 
 \textbf{\underline{\emph{Deliverable:}} The first simulated constraint from 3D MHD simulations on convective blueshift spanning the lower main sequence.}
 
@@ -229,8 +200,8 @@ Developing and studying the radiative-MHD simulations is a well-posed task which
 The span of simulations which studies stars along the main sequence is another paper which offers the student an opportunity to connect to the (larger) community of astrophysical observers in a field (exoplanetary science) which is currently very well-funded.
 
 
-\paragraph*{Research and Outreach}
-Open science is very improtant to me; my group will employ best-coding-practices and upload our simulation code and run scripts to GitHub so that our science can be easily reproduced.
+\sct{Open Science and Outreach}
+Open science is very improtant to me; my group will employ best-coding-practices and upload our simulation code and run scripts to GitHub and Zenodo so that our science can be easily reproduced.
 I am interested in finding ways to communicate with the general public about my research in addition to about astronomy and astrophysics broadly.
 My simulations provide many avenues for creating appealing visualizations that can help us connect to the public, and I am interested in exploring ways of presenting our results to the differently-abled, such as through sonification of wave spectra or turbulent spectra that our convection produces.
 
