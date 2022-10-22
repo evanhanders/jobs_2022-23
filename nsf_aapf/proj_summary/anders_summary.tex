@@ -1,0 +1,149 @@
+\documentclass[11pt]{amsart} %amsart documentation: https://ctan.math.washington.edu/tex-archive/macros/latex/required/amscls/doc/amsclass.pdf
+% The Proposal and Award Policies and Procedures Guide
+% (PAPPG: https://www.nsf.gov/publications/pub_summ.jsp?ods_key=pappg)
+% mandates, in Chapter 2, section B.2, that the main text should have a font size no less
+% than 11 points for *most* typefaces (including Computer Modern Roman and Times (new) Roman).
+% 
+% Actually, Helvetica (a.k.a. Arial), Palatino and Courier New can drop
+% to 10 point font size, according to the PAPPG,  but be aware:
+% 10-point fonts (whatever the typeface) will promote reader fatigue.
+% Reader fatigue never works to the author's advantage.
+%
+% This sample is set in 12 point type.
+%
+
+%choosing fonts: https://www.overleaf.com/learn/latex/Font_typefaces
+\fontfamily{cmr}\selectfont %computer modern roman
+
+\usepackage{amsmath,amsthm,amssymb,amscd}
+\usepackage[numbers]{natbib}
+\bibliographystyle{apj_small}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{epsf}
+\usepackage{cite}		% compress citations
+\pagenumbering{gobble}		% Research.gov wants no page numbering
+\tolerance9000
+%
+% The Proposal and Award Policies and Procedures Guide
+% (PAPPG: https://www.nsf.gov/publications/pub_summ.jsp?ods_key=pappg)
+% mandates, in Chapter 2, section B.2, that margins must be at least 1 inch in all directions.
+%
+\advance\paperheight1.00cm
+\advance\textheight1.00cm
+\advance\vsize1.00cm
+\advance\topskip-0.5cm
+\advance\voffset-0.5cm
+%
+\oddsidemargin0.15cm
+\evensidemargin0.15cm
+\textwidth16.1cm
+%
+%
+\renewcommand{\footnotesize}{\small\spaceskip4pt plus1.5pt}
+
+%Pagination - research.gov does this automatically see PAPPG II.B.1
+%\advance\footskip1cm
+%\pagenumbering{arabic}
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+%\lhead{}
+%\chead{}
+%\rhead{}
+%\lfoot{}
+%\cfoot{\thepage}
+%\rfoot{}
+%\renewcommand{\headrulewidth}{0pt}
+%
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lemma}[thm]{Lemma}
+\theoremstyle{definition}
+\newtheorem{notn}[thm]{Notation}
+\numberwithin{equation}{section}
+
+\newcommand{\aj}{The Astronomical Journal}
+\newcommand{\apj}{The Astrophysical Journal}
+\newcommand{\apjl}{The Astrophysical Journal Letters}
+\newcommand{\apjs}{The Astrophysical Journal Supplemental Series}
+\newcommand{\aap}{Astronomy \& Astrophysics}
+\newcommand{\aaps}{Astronomy \& Astrophysics Supplemental Series}
+\newcommand{\mnras}{Monthly Notices of the Royal Astronomical Society}
+\newcommand{\baas}{Bulletin of the American Astronomical Society}
+\newcommand{\zap}{Zeitschrift für Astrophysik}
+\newcommand{\prr}{Physical Review Research}
+\newcommand{\prf}{Physical Review Fluids}
+\newcommand{\sol}{\ensuremath{\odot}}
+\newcommand{\RB}{Rayleigh-B\'{e}nard }
+\newcommand{\grad}{\ensuremath{\nabla}}
+
+
+
+\newcommand\Z{{\mathbb Z}}
+\newcommand\Q{{\mathbb Q}}
+\newcommand\R{{\mathbb R}}
+\newcommand\C{{\mathbb C}}
+\newcommand\F{{\mathbb F}}
+\newcommand{\G}{{\mathcal{G}}}
+\newcommand{\T}{{\mathcal{T}}}
+\newcommand\Hom{\text{Hom}}
+\newcommand\rank{\mathop{\text{rank}}}
+\let\tensor=\otimes
+
+\graphicspath{{./figures/}}
+
+%AAPF:
+%Project Description: Please note this section must include a separate section header labeled Broader Impacts and the heading must be on its own line with no other text on that line. The Project Description must be no more than ten (10) single-spaced pages in length, and it must include:
+% -a coherent plan for research and education articulated to a level of detail suitable for an NSF grant proposal;
+% -a detailed justification for the choice of host institution(s) that identifies collaborating scientist(s) and educational mentor(s), relates the proposed work to current research and educational efforts at the host institution(s), and describes available facilities and resources and the suitability of the host institution(s); and
+% -a description of the proposer's long term career goals and role of this postdoctoral experience in achieving them.
+
+
+%PAPPG: https://www.nsf.gov/publications/pub_summ.jsp?ods_key=pappg
+\begin{document}
+%\thispagestyle{fancy}
+
+
+\centerline{\bf Project Summary for Postdoctoral Fellowship: AAPF:}
+\centerline{\bf Building modern models of convection in massive stars}
+\setcounter{section}{0}
+\vskip-.7\linespacing
+
+%This section must be no more than one page in length, describing the proposer's research and education plan. The Overview section of the Project Summary must also identify the proposed scientific mentor(s) and the proposed host institution(s).
+\section*{Overview}
+Massive stars are the cornerstone of many fields of astrophysics.
+Modern precision observations have revealed major shortcomings in theoretical models of massive stars which demand new prescriptions of convection informed by simulations.
+The research goal of this proposal is to build a next-generation set of 3D numerical simulations of convection in massive stars, which will answer the following questions:
+\begin{enumerate}
+    \item How large are convective cores in massive stars?
+    \item How do opacity-driven convective shells affect the structure of massive stars, their position on the HR diagram, and observable waves at the stellar surface?
+\end{enumerate}
+The proposed host institution is the Kavli Institute for Theoretical Physics (KITP) at the University of California, Santa Barbara (UCSB).
+The proposed scientific mentor is Prof.~Lars Bildsten.
+
+The education plan of this proposal focuses on creating a partnership between KITP and UCSB's Center for Science and Engineering Partnerships' School for Scientific Thought (SST).
+Teaching modules will be developed through collaboration with visiting expert scholars at KITP on active topics of research in modern physics and astrophysics.
+Modules will be taught to diverse groups of high school students in the setting of SST, and will be published for wide accessibility.
+
+\section*{Intellectual Merit}
+The proposed work will advance knowledge and understanding within the field of stellar structure and evolution.
+Models of convection used in stellar evolution software instruments are decades old and have clear deficiencies.
+The proposed research will create the first-ever grid of simulations of convective cores and iron convection zones of massive stars which spans the main sequence.
+These simulations will revolutionize the treatment of convective boundary mixing in stellar cores by generating a dynamically-calibrated prescription for expanding convective cores without any free parameters.
+The proposed iron convection zone simulations will result in the first-ever calibration of turbulent pressure support in opacity-driven convection zones which span the main sequence, and will provide the first test of whether these turbulent shell convection zones mask gravity waves produced in the convective core.
+These results will inform a new set of state-of-the-art stellar evolution models for use in asteroseismic observations, studies of stellar populations, and characterization of compact remnant populations.
+
+
+\section*{Broader Impacts}
+This work will bolster scientific infrastructure in the field of stellar evolution and convection.
+Hydrodynamical simulations of 3D core convection are sparse, and the proposed work will create the first open-source tool for simulating 3D convection in the cores of massive stars.
+This tool will be widely accessible and easy to interact with, thus enabling many future studies of the interior dynamics of massive stars.
+
+The proposed education plan focuses on broadening participation of underrepresented groups in the physical sciences.
+UCSB is a minority-serving institution and the SST interacts with a diverse set of high school students whose identities are underrepresented in the physical sciences.
+The proposed education plan will design inquiry-based teaching modules aimed at providing these students with an authentic STEM experience to help bolster their STEM identities and increase their likelihood of pursuing careers in STEM.
+
+
+\end{document}
