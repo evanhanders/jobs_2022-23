@@ -1,0 +1,111 @@
+\documentclass[12pt]{letter}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\newcommand{\edit}[2]{\textcolor{purple}{\sout{#1} \textbf{#2}}}
+
+\geometry{tmargin=1in}
+\geometry{bmargin=1in}
+\geometry{lmargin=1in}
+\geometry{rmargin=1in}
+\geometry{headsep=1in}
+\setlength\topmargin{-2.5in}
+%\geometry{margin=1in}
+%\geometry{headheight=0.5in}
+%\fancypagestyle{firstpage}{\fancyhf{}
+\fancypagestyle{firstpage}{\fancyhf{}
+\setlength\topmargin{-1.25in}
+\fancyhead[C]{\includegraphics[width=\paperwidth,keepaspectratio=true]{ciera_header.pdf}}
+\fancyfoot[C]{\includegraphics[width=\paperwidth,keepaspectratio=true]{ciera_footer.png}}
+\renewcommand{\headwidth}{\paperwidth}
+\fancyheadoffset{\marginparwidth}
+\fancyfootoffset{\marginparwidth}}
+\renewcommand{\headrulewidth}{0pt}
+% Address is commented out so I can use an electronic signature below
+% If address is not commented out, then change \fancypagestyle{first} to
+% \fancypagestyle{empty}
+%\address{Nicholas Chapman \\
+%         1212 Central Street APT 1S\\
+%         Evanston, IL 60201}
+%\signature{Nicholas Chapman} % commented out because I use png signature file
+
+%They want to know:
+%are you a good fit to the department? -- paragraph 2 addresses this.
+%are you productive? -- cv addresses this?
+%is your work going to have a big impact in the future?
+
+\begin{document}
+\begin{letter}{
+               Postdoctoral Researcher Search Committee \\
+               Department of Astrophysical Sciences \\
+               Princeton University
+           }
+
+\opening{Dear Committee:}
+
+    I am applying for the Lyman Spitzer, Jr. Fellowship, the Carnegie-Princeton Fellowship, and Theoretical Astrophysics Postdoctoral Positions at the Princeton University Department of Astrophysical Sciences.
+    With this letter, please find my curriculum vitae, publication list, research statement, EDI statement, and letters from Prof.~Benjamin Brown, Prof.~Daniel Lecoanet \& Dr. Matteo Cantiello.
+
+    Astrophysical convection is ubiquitous, but is poorly understood and therefore offers exciting research avenues.
+    The well-studied problem of Rayleigh-B\'{e}nard convection (RBC) lacks many of the complexities of astrophysical convection.
+    For example, stars and planets have stratified atmospheres, global rotation, and long-timescale transients.
+    On the other hand, simulations of astrophysical convection which include radiation hydrodynamics are often so complex that they become like observations themselves and are again difficult to gain understanding from.
+    My research sits between these extremes: I try to study comprehensible physics problems which include one or some of the nuances in astrophysical research which I then work to describe in detail.
+    I have found that the same fundamental scaling laws in RBC appear in stratified convective flows.
+    I have gained insight into how to vary fundamental control parameters to separate turbulence and rotational constraint in rotating convection.
+    I have extensively studied the interactions of fast and slow convective processes, paralleling the fast convection and slow evolution seen in stars.
+
+    %Dig deep into one problem to give a flavor of the type of analyses you do.
+    %Why this is an important problem? (Obs that didn't match with theory. For the first time, I have come up with a reason to make this work -- adam's paper says we're in the right ballpark. First a-priori theory / confirmed by numerical simulations that explains the latest observations.)
+    % Well on the way to solving decades-long problem.
+    %Can tell the story about how we came up with this: I was running simulations of something different, we noticed that this was changing. Used previous work on understanding long-term secular thermal evolution to realize that this process was happening (convection zone was growing to a certain size but it would stop). Looking at the literature, we found this work by  Zahn and Roxburgh from the 1980s-1990s that gives an analytic description of what's going on, based off averaging over the underlying equations, structure, etc. We modified their theory to take into account the effects of viscous dissipation which is still important even at large Reynolds (0th law of turbulence), and found good agreement with simulations, etc.
+    %Talk about the applied math that went into this interesting solution (below)
+    %Pen + paper theory (roxburgh and zahn stuff)
+    %Dedalus 3D simulations that test that theory
+    %Boils down the theory to a 1D parameterization that is more broadly useful to the astrophysics community
+    %Has led to fruitful new follow-up collaborations.
+
+    %Career plan: rotation, composition gradients, magnetic fields, stratification, geometry.
+    My most influential work focuses on penetrative convection.
+    Observations suggest that stellar structure models and 1D prescriptions of convection underestimate the size of convection zones.
+    To match these observations, boundary mixing processes implemented in 1D stellar structure models have to be finely tuned and varied from one type of star to another.
+    I have developed the first \emph{a-priori} theory which can explain these observations, and follow-up work by Dr.~Adam Jermyn suggests that this theory takes a step towards solving this decades-old problem.
+    I discovered this process while running simulations in which I expected very little mixing at the convective boundary.
+    Significantly, the convection zone advanced well beyond the expected boundary.
+    Using my previous work on the long-term secular evolution of convection zones, I realized that I was witnessing a long-timescale relaxation process.
+    Zahn and Roxburgh's work on penetrative convection in the 1980s and 90s provided me with analytical descriptions of this process.
+    I modified their theory to account for the effects of viscous dissipation, which cannot be neglected even in the large Reynolds numbers regime of astrophysical flows (per the zeroth law of turbulence).
+    This theory agreed well with laminar and turbulent three-dimensional simulations using the Dedalus code.
+    I parameterized this theory for inclusion in 1D stellar structure models.
+    I am currently collaborating with Dr.~Cole Johnston to implement this theoretical prescription into 1D MESA stellar evolution models to understand how this process affects stellar evolution.
+%    There are many ways in which this theory needs to be fine-tuned to reflect the full complexities of astrophysical settings; please refer to my personal career plan for discussion of follow-up work.
+    In my attached research statement, I discuss follow-up work that I want to pursue.
+
+    Throughout my academic career, I have striven not only to conduct state-of-the-art research, but also to develop my pedagogical and mentoring expertise through workshop attendance and practice.
+    I now provide research mentorship to five graduate students across two institutions (Northwestern and Univ.~Colorado).
+    All of these mentorship relationships have led to collaborative contributions on papers which are published or in prep (marked on my CV).
+    I enjoy being an active member of a research group and plan to be a regular participant of at least one group if I have the opportunity to come to Princeton.
+    Being a part of a research group even as a postdoctoral fellow is important to me, because I can learn from the professor who leads the group and because it affords me opportunities to co-mentor students.
+    Within my research mentoring relationships and more broadly within my academic institution, I am dedicated to providing a just, equitable and inclusive teaching and research environment.
+    During my postdoctoral fellowship at CIERA, I chaired the K12 education and public outreach taskforce, I served as a core member of CIERA's JEDI (Justice, Equity, Diversity, Inclusion) committee, and I now serve on the Climate Action Team which is helping implement a sociosystemic organizational development plan, including a departmental climate survey, with the help of Visceral Change.
+    I am excited to continue my EDI work through involvement in outreach programs and department taskforces at Princeton.
+
+    Princeton is the ideal host institute for me to carry out the next stage of my academic career.
+    I see the potential for productive collaboration between myself and Profs.~Quataert and Stone on the topics of convective boundary mixing, waves, and radiation hydrodynamics I discuss in my research plan.
+    I would also be excited to broaden the scope of my research by collaborating with e.g., Prof.~Burrows on exoplanetary atmospheres or Prof.~Goodman on tides, or with other postdoctoral researchers on topics of mutual interest.
+    I bring new expertise to the department of e.g., spectral coding methods, convection, interactions between convective \& stable regions, and other interior mixing in stars.
+    For these reasons, I am an ideal candidate for these positions.
+
+    If there are any other questions or concerns please do not hesitate to contact me.
+    Thank you for your time and consideration.
+
+\closing{Sincerely,}
+\vspace{-0.9in}
+\fromsig{\includegraphics[scale=0.2]{signature.png}}\\
+\fromname{Evan H. Anders}
+\end{letter}
+
+\end{document}
