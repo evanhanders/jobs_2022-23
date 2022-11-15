@@ -1,0 +1,161 @@
+\documentclass[11pt]{article}
+%%%%%%begin preamble
+\usepackage[hmargin=0.85in, vmargin=0.7in]{geometry} % Margins
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage[numbers]{natbib}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{wrapfig}
+
+\usepackage{multicol}
+\usepackage{etoolbox}
+%\patchcmd{\thebibliography}{\section*{\refname}}
+%    {\begin{multicols}{2}[\section*{\refname}]}{}{}
+%\patchcmd{\endthebibliography}{\endlist}{\endlist\end{multicols}}{}{}
+
+
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\newcommand{\edit}[2]{\textcolor{purple}{\sout{#1} \textbf{#2}}}
+
+\hypersetup{
+  colorlinks   = true,
+  %citecolor    = blue
+  citecolor    = blue
+  % gray is not being found!?!
+  % gray is found if pdfpages is used... crap.
+  %citecolor    = grey
+  %citecolor    = Gray
+}
+
+
+%% headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % sets both header and footer to nothing
+\lhead{Evan H. Anders}
+\rhead{Equity, Diversity, \& Inclusion Statement}
+\cfoot{\footnotesize{\thepage}}
+%\pagestyle{empty}
+%\pagenumbering{gobble}
+%\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+
+\renewcommand{\vec}{\ensuremath{\boldsymbol}}
+\newcommand{\dedalus}{\href{http://dedalus-project.org}{Dedalus}}
+\newcommand{\del}{\ensuremath{\vec{\nabla}}}
+\newcommand{\scrS}{\ensuremath{\mathcal{S}}}
+
+\newcommand{\prf}{Physical Review Fluids}
+\newcommand{\ssr}{Space Science Reviews}
+\newcommand{\araa}{Annual Reviews of Astronomy and Astrophysics}
+\newcommand{\mnras}{Monthly Notices of the Royal Astronomical Society}
+\newcommand{\aap}{Astronomy \& Astrophysics}
+\newcommand{\apjl}{The Astrophysical Journal Letters}
+\newcommand{\apj}{The Astrophysical Journal}
+
+%\newcommand{\nosection}[1]{%
+%  \refstepcounter{section}%
+%  \addcontentsline{toc}{section}{\protect\numberline{\thesection}#1}%
+%  \markright{#1}}
+%\newcommand{\nosubsection}[1]{%
+%  \refstepcounter{subsection}%
+%  \addcontentsline{toc}{subsection}{\protect\numberline{\thesubsection}#1}%
+%  \markright{#1}}
+
+%\usepackage{atbegshi}
+%%%%%%end preamble
+
+
+%Make bibliography 2col
+\bibliographystyle{apj_small}
+\makeatletter
+\renewenvironment{thebibliography}[1]
+     {\begin{multicols}{2}[\paragraph*{\refname}\vspace{-0.1in}]%
+      \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}%
+      \list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \setlength{\itemsep}{-2pt}
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist\end{multicols}}
+\makeatother
+
+
+
+\begin{document}
+\thispagestyle{fancy}
+
+\vspace{-0.2cm}
+STEM has a demographics crisis which is particularly dire in the physical sciences. 
+Our fields are more male and more white than the Canadian population as a whole, which means that these fields are missing out on diverse perspectives and talent \citep{stem_laborforce_2021}. 
+Identity-based inequities are further ingrained in the disparate nature in which we distribute credit in the form of citations \citep{teich_etal_2022}.
+These inequities are immoral, and it is the work of all members of the STEM, Physics, and Astrophysics community---especially white men like myself, who are an overrepresented majority with excess power---to make the field more welcoming and inclusive.
+There is a high differential attrition rate of underrepresented groups in baccalaureate and post-graduate programs \citep{whitcomb_singh_2021}, and university professors can make immediate impacts at these levels.
+
+My focus on improving retention of underrepresented groups is rooted in social cognitive career theory \citep{kelly_2016}, which has three axes: ``physics self-concept and self-efficacy'', ``expectancy-value and planned behavior'', and ``motivation and self-determination''.
+
+Physics self-concept and self-efficacy negatively manifests as feelings of inadequacy, lack of social support, and communication anxiety.
+To combat this, we need to build young peoples' identities as scientists by providing opportunities to build competance, to perform science skills, and to receive recognition  \citep{hazari_etal_2010}.
+In addition to building knowledge and competence, STEM education (in classrooms and research groups) must give students experience to \emph{perform} as scientists by e.g., giving talks or collaborating on projects \emph{in low-stakes environments}.
+Furthermore, students deserve positive recognition for their accomplishments, but often only receive criticism (even if constructive) on a regular basis.
+As a research mentor, I frequently encourage and complement my students for their work. 
+Even small victories deserve to be celebrated, and I try to instill that mindset in my students.
+
+Expectancy-value and planned behavior manifests as buying into negative stereotypes about oneself or experiencing negative environments.
+Studies have shown that stereotype threat can be mitigated using values affirmation exercises \citep{miyake_etal_2010}, which I plan to use before tests in my classrooms.
+To create inclusive classrooms, I practice small actions like reading an explicit welcome statement at the beginning of the term, asking students what they prefer I call them and what pronouns they prefer I use, etc.
+I also try to design assessments with multiple ways to productively participate and succeed.
+I still have a lot to learn, and plan to take the Inclusive STEM Project MOOC course in the coming year.
+
+Motivation and self-determination can drive students out of STEM because they do not find it intrinsically motivating or socially relevant, or because they lack encouragement.
+One way to build relevance is by employing lesson plans which allow students to engage with their culture \emph{and} science simultaneously.
+One example of such a lesson plan--which was developed for middle school but is applicable to introductory undergraduate astronomy classes--can be found online here: \url{https://www.openscied.org/instructional-materials/8-4-earth-in-space/}.
+In my mentoring relationships, I practice active listening \citep{jahromi_etal_2016} with my students to try to understand what motivates them so that I do not steer them out of intrinsically motivating questions.
+%I try hard to provide guidance without “taking over” my students' projects so that they have the space to participate in scientific practices in a safe and judgment-free environment so they can succeed in higher-pressure environments (e.g., conference talks).
+
+I have a track record of making my departments more just, equitable, diverse, and inclusive spaces.
+As a graduate student, I created the first rubric used on the graduated admissions committee, iterated on that rubric, and led the push to adopt rubrics in this process permanently.
+This rubric has measurably reduced the bias of reviewers which has led to the admission of more diverse classes.
+As a postdoc at Northwestern, I have been an integral part of the push to hire Visceral Change to perform a climate survey this academic year.
+I aim to use my power and privilege in the field to make systemic changes within my own departments to improve outcomes for all scientists regardless of their identity.
+I look forward to leading similar initiatives at the University of British Columbia or discussing other ways to improve the equity, diversity, and inclusivity of The Department of Physics \& Astronomy in formal ways.
+
+%
+%\begin{enumerate}
+%    \item Discuss social cognitive career theory and Kelly 2016 PRPER 12 020116. Talk about how you will work to bolster each axis in:
+%        \begin{enumerate}
+%            \item Physics self-concept and self-efficacy (pervasive feelings of inadequacy, lack of social support, communication anxiety)
+%            \item Expectancy-value and planned behavior (negative stereotypes of women, undesirable clasroom environments, lack of female role models)
+%            \item Motivation and self-determination (intrinsic appeal of physics, social relevance of physics, lack of encouragement)
+%        \end{enumerate}
+%    \item Cite Hazari et al 2010 JRST 47 8: ``The theoretical framework focuses on physics identity and includes the dimensions of student performance, competence, recognition by others, and interest."
+%    \item Cite Hazari et al 2013 PRST-PER 9 020115: ``However, discussions about women’s underrepresentation have a significant positive effect."
+%    \item Cite Miyake et al 2010 Science 330: ``Values affirmation reduced the male-female performance and learning difference substantially and elevated women’s modal grades from the C to B range."
+%    \item Discuss and link explicit welcome statement
+%    \item Discuss and link to manhattanhenge:
+%        \begin{enumerate}
+%            \item Astronomy is perceived as a particularly Western and White science (Ali 2010).
+%            \item Higher attrition of women / BIPOC from astronomy/physics (Porter \& Ivie 2019).
+%            \item Build relevance by centering cultural sustainability in design decisions. E.g., \url{https://www.openscied.org/instructional-materials/8-4-earth-in-space/}
+%        \end{enumerate}
+%\end{enumerate}
+
+\vspace{-0.4cm}
+{\scriptsize
+\bibliography{biblio}
+}
+\end{document}

@@ -1,0 +1,134 @@
+\documentclass[12pt]{letter}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\newcommand{\edit}[2]{\textcolor{purple}{\sout{#1} \textbf{#2}}}
+
+\geometry{tmargin=1in}
+\geometry{bmargin=1in}
+\geometry{lmargin=1in}
+\geometry{rmargin=1in}
+\geometry{headsep=1in}
+\setlength\topmargin{-2.5in}
+%\geometry{margin=1in}
+%\geometry{headheight=0.5in}
+%\fancypagestyle{firstpage}{\fancyhf{}
+\fancypagestyle{firstpage}{\fancyhf{}
+\setlength\topmargin{-1.25in}
+\fancyhead[C]{\includegraphics[width=\paperwidth,keepaspectratio=true]{ciera_header.pdf}}
+\fancyfoot[C]{\includegraphics[width=\paperwidth,keepaspectratio=true]{ciera_footer.png}}
+\renewcommand{\headwidth}{\paperwidth}
+\fancyheadoffset{\marginparwidth}
+\fancyfootoffset{\marginparwidth}}
+\renewcommand{\headrulewidth}{0pt}
+% Address is commented out so I can use an electronic signature below
+% If address is not commented out, then change \fancypagestyle{first} to
+% \fancypagestyle{empty}
+%\address{Nicholas Chapman \\
+%         1212 Central Street APT 1S\\
+%         Evanston, IL 60201}
+%\signature{Nicholas Chapman} % commented out because I use png signature file
+
+%They want to know:
+%are you a good fit to the department? -- paragraph 2 addresses this.
+%are you productive? -- cv addresses this?
+%is your work going to have a big impact in the future?
+
+\begin{document}
+\begin{letter}{
+               Faculty Search Committee \\
+               Department of Physics and Astronomy \\
+               University of British Columbia
+           }
+
+\opening{Dear Committee:}
+
+    I am applying for the position of Assistant Professor at The Department of Physics and Astronomy at The University of British Columbia in Vancouver.
+    With this letter, please find my curriculum vitae, publications list, a statement of research interests, a summary of teaching interests and experience, a diversity statement, and letters of reference from Prof.~Benjamin Brown, Prof.~Daniel Lecoanet, \& Dr.~Matteo Cantiello.
+
+    Astrophysical convection is ubiquitous, but is poorly understood and therefore offers exciting research avenues.
+    The well-studied problem of Rayleigh-B\'{e}nard convection (RBC) lacks many of the complexities of astrophysical convection.
+    For example, stars and planets have stratified atmospheres, global rotation, and long-timescale transients.
+    On the other hand, simulations of astrophysical convection which include radiation hydrodynamics are often so complex that they become like observations themselves and are again difficult to gain understanding from.
+    My research sits between these extremes: I try to study comprehensible physics problems which include one or some of the nuances in astrophysical research which I then work to describe in detail.
+    I have found that the same fundamental scaling laws in RBC appear in stratified convective flows.
+    I have gained insight into how to vary fundamental control parameters to separate turbulence and rotational constraint in rotating convection.
+    I have extensively studied the interactions of fast and slow convective processes, paralleling the fast convection and slow evolution seen in stars.
+
+    %Dig deep into one problem to give a flavor of the type of analyses you do.
+    %Why this is an important problem? (Obs that didn't match with theory. For the first time, I have come up with a reason to make this work -- adam's paper says we're in the right ballpark. First a-priori theory / confirmed by numerical simulations that explains the latest observations.)
+    % Well on the way to solving decades-long problem.
+    %Can tell the story about how we came up with this: I was running simulations of something different, we noticed that this was changing. Used previous work on understanding long-term secular thermal evolution to realize that this process was happening (convection zone was growing to a certain size but it would stop). Looking at the literature, we found this work by  Zahn and Roxburgh from the 1980s-1990s that gives an analytic description of what's going on, based off averaging over the underlying equations, structure, etc. We modified their theory to take into account the effects of viscous dissipation which is still important even at large Reynolds (0th law of turbulence), and found good agreement with simulations, etc.
+    %Talk about the applied math that went into this interesting solution (below)
+    %Pen + paper theory (roxburgh and zahn stuff)
+    %Dedalus 3D simulations that test that theory
+    %Boils down the theory to a 1D parameterization that is more broadly useful to the astrophysics community
+    %Has led to fruitful new follow-up collaborations.
+
+    %Career plan: rotation, composition gradients, magnetic fields, stratification, geometry.
+    My most influential work focuses on penetrative convection.
+    Observations suggest that stellar structure models and 1D prescriptions of convection underestimate the size of convection zones.
+    To match these observations, boundary mixing processes implemented in 1D stellar structure models have to be finely tuned and varied from one type of star to another.
+    I have developed the first \emph{a-priori} theory which can explain these observations, and follow-up work by Dr.~Adam Jermyn suggests that this theory takes a step towards solving this decades-old problem.
+    I discovered this process while running simulations in which I expected very little mixing at the convective boundary.
+    Significantly, the convection zone advanced well beyond the expected boundary.
+    Using my previous work on the long-term secular evolution of convection zones, I realized that I was witnessing a long-timescale relaxation process.
+    Zahn and Roxburgh's work on penetrative convection in the 1980s and 90s provided me with analytical descriptions of this process.
+    I modified their theory to account for the effects of viscous dissipation, which cannot be neglected even in the large Reynolds numbers regime of astrophysical flows (per the zeroth law of turbulence).
+    This theory agreed well with laminar and turbulent three-dimensional simulations using the Dedalus code.
+    I parameterized this theory for inclusion in 1D stellar structure models.
+    I am currently collaborating with Dr.~Cole Johnston to implement this theoretical prescription into 1D MESA stellar evolution models to understand how this process affects stellar evolution.
+%    There are many ways in which this theory needs to be fine-tuned to reflect the full complexities of astrophysical settings; please refer to my personal career plan for discussion of follow-up work.
+    In my attached career plan, I discuss in more detail several possible directions for the development of this work.
+
+    Throughout my academic career, I have striven not only to conduct state-of-the-art research, but also to develop my pedagogical and mentoring expertise through workshop attendance and practice.
+    I now provide research mentorship to five graduate students across two institutions (Northwestern and Univ.~Colorado).
+    All of these mentorship relationships have led to collaborative contributions on papers which are published or in prep (marked on my publication list).
+    Within my research mentoring relationships and more broadly within my academic institution, I am dedicated to providing a just, equitable and inclusive teaching and research environment.
+    During my postdoctoral fellowship at CIERA, I chaired the K12 education and public outreach taskforce, and I now serve as a core member of CIERA's JEDI (Justice, Equity, Diversity, Inclusion) committee, which has organized an external sociosystemic organizational development plan, including a departmental climate survey, in the coming academic year.
+    I have a track record of participating in public outreach programs (please refer to my CV), and I am excited to continue to participate in outreach at UBC, particularly through involvement in the PHAS Outreach Program's summer camps and teacher support resources.
+    I also plan to continue my EDI work at the departmental level by e.g., building more just hiring and admissions practices and would be happy to bring my experience in coordinating a climate survey to UBC so that the department can learn about and be responsive to its problem areas.
+
+
+    I am particularly excited about this job opportunity.
+    My research naturally fits into your department's Astronomy \& Astrophysics research area, and I see great potential for productive collaboration between myself and Profs.~Heyl, Matthews, and Richer on topics like stellar evolution, stellar pulsations, and characterizing stellar populations.
+    I bring knowledge of new research areas, e.g., spectral coding methods, interactions between convection and stable regions, and the fluid dynamics of rotation, magnetism, and multi-timescale processes.
+    I am an expert at using the \emph{Dedalus} code, and I hope to use it to expand my research horizons through collaborations outside of my past expertise.
+    I would also be happy to help others at UBC learn how to apply this tool to their own research in a broad range of research areas such as biophysics.
+    I value teaching and mentorship, and am an engaged member of my department community.
+    For these reasons, I am an ideal candidate for this post.
+
+%    In support of my application, please feel free to contact the following individuals:
+%
+%    \footnotesize
+%    \begin{tabular}{ll}
+%        \textbf{Prof.~Benjamin P.~Brown}                        &\hspace{0.25in} \textbf{Prof.~Daniel Lecoanet}                     \\
+%        University of Colorado, Boulder                         &\hspace{0.25in} Northwestern University    \\
+%        \hspace{0.2in}Dept.~Astrophysical \& Planetary Sciences &\hspace{0.45in} Dept.~Engineering Sciences \& Applied Mathematics \\
+%        Tel: +1 (303) 653-2371                                    &\hspace{0.45in} CIERA                          \\
+%        Email: bpbrown@colorado.edu                             &\hspace{0.25in} Tel: +1 (608) 335-3950 \\
+%                                                                &\hspace{0.25in} Email: daniel.lecoanet@northwestern.edu             \\
+%
+%        \textbf{Dr.~Matteo Cantiello}                          & \\
+%         Flatiron Insitute                                     & \\
+%         \hspace{0.2in}Center for Computational Astrophysics   & \\
+%         Princeton University                                  & \\
+%         \hspace{0.2in}Dept.~Astrophysical Sciences & \\
+%         Tel: +1 (805) 280-8175  & \\
+%         Email: mcantiello@flatironinstitute.org & \\
+%    \end{tabular}
+
+    \normalsize
+    If there are any other questions or concerns please do not hesitate to contact me.
+    Thank you for your time and consideration.
+
+\closing{Sincerely,}
+\vspace{-0.9in}
+\fromsig{\includegraphics[scale=0.2]{signature.png}}\\
+\fromname{Evan H. Anders}
+\end{letter}
+
+\end{document}
