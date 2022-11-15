@@ -1,0 +1,142 @@
+\documentclass[11pt]{article}
+%%%%%%begin preamble
+\usepackage[hmargin=1in, vmargin=1in]{geometry} % Margins
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage[numbers]{natbib}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{wrapfig}
+
+\usepackage{multicol}
+\usepackage{etoolbox}
+%\patchcmd{\thebibliography}{\section*{\refname}}
+%    {\begin{multicols}{2}[\section*{\refname}]}{}{}
+%\patchcmd{\endthebibliography}{\endlist}{\endlist\end{multicols}}{}{}
+
+
+\usepackage[normalem]{ulem}
+\usepackage{xcolor}
+\newcommand{\edit}[2]{\textcolor{purple}{\sout{#1} \textbf{#2}}}
+
+\hypersetup{
+  colorlinks   = true,
+  %citecolor    = blue
+  linkcolor = blue,
+  citecolor    = blue
+  % gray is not being found!?!
+  % gray is found if pdfpages is used... crap.
+  %citecolor    = grey
+  %citecolor    = Gray
+}
+
+
+%% headers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % sets both header and footer to nothing
+\lhead{Evan H. Anders}
+\rhead{Teaching Statement}
+\cfoot{\footnotesize{\thepage}}
+%\pagestyle{empty}
+%\pagenumbering{gobble}
+%\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+
+\renewcommand{\vec}{\ensuremath{\boldsymbol}}
+\newcommand{\dedalus}{\href{http://dedalus-project.org}{Dedalus}}
+\newcommand{\del}{\ensuremath{\vec{\nabla}}}
+\newcommand{\scrS}{\ensuremath{\mathcal{S}}}
+
+\newcommand{\prf}{Physical Review Fluids}
+\newcommand{\ssr}{Space Science Reviews}
+\newcommand{\araa}{Annual Reviews of Astronomy and Astrophysics}
+\newcommand{\mnras}{Monthly Notices of the Royal Astronomical Society}
+\newcommand{\aap}{Astronomy \& Astrophysics}
+\newcommand{\apjl}{The Astrophysical Journal Letters}
+\newcommand{\apj}{The Astrophysical Journal}
+
+%\newcommand{\nosection}[1]{%
+%  \refstepcounter{section}%
+%  \addcontentsline{toc}{section}{\protect\numberline{\thesection}#1}%
+%  \markright{#1}}
+%\newcommand{\nosubsection}[1]{%
+%  \refstepcounter{subsection}%
+%  \addcontentsline{toc}{subsection}{\protect\numberline{\thesubsection}#1}%
+%  \markright{#1}}
+
+%\usepackage{atbegshi}
+%%%%%%end preamble
+
+
+%Make bibliography 2col
+\bibliographystyle{apj_small}
+\makeatletter
+\renewenvironment{thebibliography}[1]
+     {\begin{multicols}{2}[\paragraph*{\refname}\vspace{-0.1in}]%
+      \@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}%
+      \list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \setlength{\itemsep}{-2pt}
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist\end{multicols}}
+\makeatother
+
+
+
+\begin{document}
+\thispagestyle{fancy}
+
+My teaching philosophy is rooted in a growth mindset \citep{moser_etal_2011} and an acknowledgment of the fact that human intelligence is malleable. 
+I believe that courses should be designed so that through hard work, all students who put in effort can grow, learn, and be successful in the classroom.
+My mindset also applies to myself: I have a lot to learn about teaching and how to be a better teacher.
+I am excited to improve my teaching both through practice and through learning more about STEM teaching pedagogy.
+When I entered graduate school, I thought that good teachers were “born not made.” 
+I have come to realize quite the opposite is true. 
+
+When I entered graduate school, my graduate teacher orientation introduced me to some pedagogical practices. 
+I learned simple facilitation moves like being patient and providing students with space and time to respond to questions. 
+I was also introduced to active learning techniques using multiple choice questions and personal response systems, the importance of providing students the space to be wrong (without penalization), and the value of peer learning.
+While teaching as a “lab TA,” I got to personally facilitate groups of 20 students, and I got to experiment with and employ this knowledge.
+I learned both how difficult it can be to properly implement best teaching practices, but also how rewarding and effective informed pedagogical choices can be.
+
+Later in graduate school, I attended UCSB ISEE’s Professional Development Program (PDP) twice. 
+This program was my first exposure to backwards design \citep{wiggins_mctighe_2005} and assessment-driven course design, as well as the concept of centering activity design around genuine inquiry \citep{inquiry}. 
+One of the most fundamental and useful things that I learned during this program was the power of rubrics and how to create and iterate upon them. 
+I was so excited about backwards design and active learning techniques that, when I was given the opportunity to be a co-instructor of record with a fellow graduate student in 2017, my fellow instructor and I decided to redesign the course from the ground up using backwards design principles. 
+During this course, I came to appreciate just how much work goes into designing a course with care and thought. 
+%My 5 weeks teaching that course involved some of the highest highs of my professional career, but I learned so much about how to be an effective teacher and how to design a good course.  (doesn't make sense)
+This opportunity also taught me when to ask for help, and when to take advantage of course material that colleagues have developed (and to make small improvements, not redesign whole courses).
+
+More recently, I participated in CIRTL's ``Introduction to Evidence-based STEM teaching'' MOOC.
+This course gave me a deeper appreciation of why learning goals are important, and I learned how to build learning goals through application of Bloom's Taxonomy \citep{simon_taylor_2008}.
+I also learned that many different activities can be used to promote active learning including e.g., worksheets, tutorials, or group problem solving in addition to personal response systems.
+I've learned how to use feedback codes to provide substantive feedback for my students without re-writing the same feedback repeatedly (or giving none).
+I've also learned about STEM \emph{skills} rubrics, which I hope to use to encourage students to be well-rounded individuals who excel in skills like persistence, self-compassion, communication, collaboration, and reflection; these types of skills can be built through activities such as peer-assisted learning.
+
+%I have grown so much as a teacher in the past ten years, and I hope that my classrooms will continue to evolve as I become a more experienced and knowledgeable teacher in the coming years.
+%In my career I have tried to apply pedagogical principles to all aspects of my work where they are applicable (for example, backwards design has helped me developing clearer research talks and papers). 
+%I look forward to learning more, and growing as an educator, in the years that come.
+
+I am excited to participate in curriculum development and to continue to grow as a teacher at the University of California, Davis.
+I would immediately be comfortable teaching most undergraduate and some graduate PHY and AST courses offered by your department, and I would be particularly excited to teach PHY 010C, 040, 045, 104B, 151, 210, or 269 or AST 010G, 010S, or 025; most of these courses focus on stars or computational methods.
+I would also be excited to eventually develop a course on astrophysical fluid dynamics.
+
+
+{\scriptsize
+\bibliography{biblio}
+}
+\end{document}
